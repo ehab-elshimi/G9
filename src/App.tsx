@@ -1,6 +1,6 @@
 function App() {
   return (
-    <main className="min-h-screen bg-slate-950 flex items-center justify-center">
+    <main className="flex min-h-screen items-center justify-center bg-slate-950">
       <h1 className="text-4xl font-bold text-white">G9 Project</h1>
     </main>
   )
