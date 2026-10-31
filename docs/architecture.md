@@ -7,6 +7,7 @@ G9 V1 follows a **Layer-Based Architecture**.
 The application is organized into layers according to their technical responsibilities.
 
 The primary goals are:
+
 - Clear separation of responsibilities.
 - Maintainable and reusable code.
 - Controlled dependencies between layers.
@@ -42,22 +43,27 @@ src/
 ## 3. Layer Responsibilities
 
 ### app
+
 Application composition and configuration.
 
 Responsible for:
+
 - Application providers.
 - Router configuration.
 - Root application setup.
 
 ### pages
+
 Route-level pages and page composition.
 
 Organized by application context:
+
 - auth
 - storefront
 - admin
 
 ### components
+
 Reusable UI components.
 
 - ui: Generic UI components.
@@ -65,17 +71,21 @@ Reusable UI components.
 - Domain-specific component groups are introduced when needed.
 
 ### hooks
+
 Reusable React behavior and shared hooks.
 
 Examples:
+
 - useAuth
 - useCart
 - useDebounce
 
 ### services
+
 API communication and data operations.
 
 Responsibilities:
+
 - HTTP requests.
 - API response handling.
 - Data operations.
@@ -83,32 +93,40 @@ Responsibilities:
 Services must not depend on React.
 
 ### types
+
 Shared TypeScript contracts and interfaces.
 
 Examples:
+
 - Product
 - User
 - Order
 
 ### utils
+
 Reusable framework-independent utility functions.
 
 Examples:
+
 - formatCurrency
 - formatDate
 - calculateDiscount
 
 ### lib
+
 Configuration and shared instances of external libraries.
 
 Examples:
+
 - Axios instance.
 - TanStack Query client.
 
 ### assets
+
 Static resources such as images, icons, and fonts.
 
 ### styles
+
 Global CSS and shared styling organization.
 
 ## 4. Dependency Rules
@@ -154,17 +172,17 @@ Components are responsible for presenting the resulting data.
 
 ## 6. Naming Conventions
 
-| Element | Convention | Example |
-|---|---|---|
-| Components | PascalCase | ProductCard.tsx |
-| Pages | PascalCase + Page | ProductsPage.tsx |
-| Hooks | camelCase + use | useProducts.ts |
-| Services | camelCase | productService.ts |
-| Types files | lowercase | product.ts |
-| Type names | PascalCase | Product |
-| Utilities | camelCase | formatCurrency.ts |
-| Folders | lowercase | storefront |
-| CSS files | kebab-case | global.css |
+| Element     | Convention        | Example           |
+| ----------- | ----------------- | ----------------- |
+| Components  | PascalCase        | ProductCard.tsx   |
+| Pages       | PascalCase + Page | ProductsPage.tsx  |
+| Hooks       | camelCase + use   | useProducts.ts    |
+| Services    | camelCase         | productService.ts |
+| Types files | lowercase         | product.ts        |
+| Type names  | PascalCase        | Product           |
+| Utilities   | camelCase         | formatCurrency.ts |
+| Folders     | lowercase         | storefront        |
+| CSS files   | kebab-case        | global.css        |
 
 ## 7. Architectural Principles
 
